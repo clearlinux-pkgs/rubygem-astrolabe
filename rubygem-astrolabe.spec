@@ -4,7 +4,7 @@
 #
 Name     : rubygem-astrolabe
 Version  : 1.3.1
-Release  : 1
+Release  : 2
 URL      : https://rubygems.org/downloads/astrolabe-1.3.1.gem
 Source0  : https://rubygems.org/downloads/astrolabe-1.3.1.gem
 Summary  : No detailed summary available
