@@ -4,24 +4,16 @@
 #
 Name     : rubygem-astrolabe
 Version  : 1.3.1
-Release  : 2
+Release  : 3
 URL      : https://rubygems.org/downloads/astrolabe-1.3.1.gem
 Source0  : https://rubygems.org/downloads/astrolabe-1.3.1.gem
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : MIT
 BuildRequires : ruby
-BuildRequires : rubygem-ast
-BuildRequires : rubygem-devise
-BuildRequires : rubygem-diff-lcs
 BuildRequires : rubygem-fuubar
-BuildRequires : rubygem-parser
 BuildRequires : rubygem-rdoc
-BuildRequires : rubygem-rspec
 BuildRequires : rubygem-rspec-core
-BuildRequires : rubygem-rspec-expectations
-BuildRequires : rubygem-rspec-mocks
-BuildRequires : rubygem-rspec-support
 BuildRequires : rubygem-rubygems-tasks
 
 %description
@@ -58,68 +50,33 @@ cp -pa .%{_bindir}/* \
 %{buildroot}%{_bindir}/
 fi
 
-%check
-export http_proxy=http://127.0.0.1:9/
-export https_proxy=http://127.0.0.1:9/
-export no_proxy=localhost
-pushd %{buildroot}%{gem_dir}/gems/astrolabe-1.3.1
-rspec -I.:lib spec/
-popd
-
 
 %files
 %defattr(-,root,root,-)
-/usr/lib64/ruby/gems/2.2.0/cache/astrolabe-1.3.1.gem
-/usr/lib64/ruby/gems/2.2.0/doc/astrolabe-1.3.1/ri/Astrolabe/Builder/cdesc-Builder.ri
-/usr/lib64/ruby/gems/2.2.0/doc/astrolabe-1.3.1/ri/Astrolabe/Builder/n-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/astrolabe-1.3.1/ri/Astrolabe/Node/Parser/Meta/cdesc-Meta.ri
-/usr/lib64/ruby/gems/2.2.0/doc/astrolabe-1.3.1/ri/Astrolabe/Node/Parser/cdesc-Parser.ri
-/usr/lib64/ruby/gems/2.2.0/doc/astrolabe-1.3.1/ri/Astrolabe/Node/ancestors-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/astrolabe-1.3.1/ri/Astrolabe/Node/cdesc-Node.ri
-/usr/lib64/ruby/gems/2.2.0/doc/astrolabe-1.3.1/ri/Astrolabe/Node/child_nodes-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/astrolabe-1.3.1/ri/Astrolabe/Node/descendants-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/astrolabe-1.3.1/ri/Astrolabe/Node/each_ancestor-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/astrolabe-1.3.1/ri/Astrolabe/Node/each_child_node-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/astrolabe-1.3.1/ri/Astrolabe/Node/each_descendant-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/astrolabe-1.3.1/ri/Astrolabe/Node/each_node-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/astrolabe-1.3.1/ri/Astrolabe/Node/new-c.ri
-/usr/lib64/ruby/gems/2.2.0/doc/astrolabe-1.3.1/ri/Astrolabe/Node/parent%3d-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/astrolabe-1.3.1/ri/Astrolabe/Node/parent-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/astrolabe-1.3.1/ri/Astrolabe/Node/root%3f-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/astrolabe-1.3.1/ri/Astrolabe/Node/sibling_index-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/astrolabe-1.3.1/ri/Astrolabe/Node/visit_ancestors-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/astrolabe-1.3.1/ri/Astrolabe/Node/visit_ancestors_with_types-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/astrolabe-1.3.1/ri/Astrolabe/Node/visit_descendants-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/astrolabe-1.3.1/ri/Astrolabe/Node/visit_descendants_with_types-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/astrolabe-1.3.1/ri/Astrolabe/Sexp/cdesc-Sexp.ri
-/usr/lib64/ruby/gems/2.2.0/doc/astrolabe-1.3.1/ri/Astrolabe/Sexp/s-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/astrolabe-1.3.1/ri/Astrolabe/Version/cdesc-Version.ri
-/usr/lib64/ruby/gems/2.2.0/doc/astrolabe-1.3.1/ri/Astrolabe/Version/to_s-c.ri
-/usr/lib64/ruby/gems/2.2.0/doc/astrolabe-1.3.1/ri/Astrolabe/cdesc-Astrolabe.ri
-/usr/lib64/ruby/gems/2.2.0/doc/astrolabe-1.3.1/ri/cache.ri
-/usr/lib64/ruby/gems/2.2.0/gems/astrolabe-1.3.1/.gitignore
-/usr/lib64/ruby/gems/2.2.0/gems/astrolabe-1.3.1/.rspec
-/usr/lib64/ruby/gems/2.2.0/gems/astrolabe-1.3.1/.rubocop.yml
-/usr/lib64/ruby/gems/2.2.0/gems/astrolabe-1.3.1/.travis.yml
-/usr/lib64/ruby/gems/2.2.0/gems/astrolabe-1.3.1/.yardopts
-/usr/lib64/ruby/gems/2.2.0/gems/astrolabe-1.3.1/CHANGELOG.md
-/usr/lib64/ruby/gems/2.2.0/gems/astrolabe-1.3.1/Gemfile
-/usr/lib64/ruby/gems/2.2.0/gems/astrolabe-1.3.1/Guardfile
-/usr/lib64/ruby/gems/2.2.0/gems/astrolabe-1.3.1/LICENSE.txt
-/usr/lib64/ruby/gems/2.2.0/gems/astrolabe-1.3.1/README.md
-/usr/lib64/ruby/gems/2.2.0/gems/astrolabe-1.3.1/Rakefile
-/usr/lib64/ruby/gems/2.2.0/gems/astrolabe-1.3.1/astrolabe.gemspec
-/usr/lib64/ruby/gems/2.2.0/gems/astrolabe-1.3.1/benchmark/.rubocop.yml
-/usr/lib64/ruby/gems/2.2.0/gems/astrolabe-1.3.1/benchmark/benchmark_helper.rb
-/usr/lib64/ruby/gems/2.2.0/gems/astrolabe-1.3.1/benchmark/performance_spec.rb
-/usr/lib64/ruby/gems/2.2.0/gems/astrolabe-1.3.1/lib/astrolabe.rb
-/usr/lib64/ruby/gems/2.2.0/gems/astrolabe-1.3.1/lib/astrolabe/builder.rb
-/usr/lib64/ruby/gems/2.2.0/gems/astrolabe-1.3.1/lib/astrolabe/node.rb
-/usr/lib64/ruby/gems/2.2.0/gems/astrolabe-1.3.1/lib/astrolabe/sexp.rb
-/usr/lib64/ruby/gems/2.2.0/gems/astrolabe-1.3.1/lib/astrolabe/version.rb
-/usr/lib64/ruby/gems/2.2.0/gems/astrolabe-1.3.1/spec/.rubocop.yml
-/usr/lib64/ruby/gems/2.2.0/gems/astrolabe-1.3.1/spec/astrolabe/node_spec.rb
-/usr/lib64/ruby/gems/2.2.0/gems/astrolabe-1.3.1/spec/astrolabe/sexp_spec.rb
-/usr/lib64/ruby/gems/2.2.0/gems/astrolabe-1.3.1/spec/spec_helper.rb
-/usr/lib64/ruby/gems/2.2.0/gems/astrolabe-1.3.1/spec/support/shared_contexts.rb
-/usr/lib64/ruby/gems/2.2.0/specifications/astrolabe-1.3.1.gemspec
+/usr/lib64/ruby/gems/2.3.0/cache/astrolabe-1.3.1.gem
+/usr/lib64/ruby/gems/2.3.0/gems/astrolabe-1.3.1/.gitignore
+/usr/lib64/ruby/gems/2.3.0/gems/astrolabe-1.3.1/.rspec
+/usr/lib64/ruby/gems/2.3.0/gems/astrolabe-1.3.1/.rubocop.yml
+/usr/lib64/ruby/gems/2.3.0/gems/astrolabe-1.3.1/.travis.yml
+/usr/lib64/ruby/gems/2.3.0/gems/astrolabe-1.3.1/.yardopts
+/usr/lib64/ruby/gems/2.3.0/gems/astrolabe-1.3.1/CHANGELOG.md
+/usr/lib64/ruby/gems/2.3.0/gems/astrolabe-1.3.1/Gemfile
+/usr/lib64/ruby/gems/2.3.0/gems/astrolabe-1.3.1/Guardfile
+/usr/lib64/ruby/gems/2.3.0/gems/astrolabe-1.3.1/LICENSE.txt
+/usr/lib64/ruby/gems/2.3.0/gems/astrolabe-1.3.1/README.md
+/usr/lib64/ruby/gems/2.3.0/gems/astrolabe-1.3.1/Rakefile
+/usr/lib64/ruby/gems/2.3.0/gems/astrolabe-1.3.1/astrolabe.gemspec
+/usr/lib64/ruby/gems/2.3.0/gems/astrolabe-1.3.1/benchmark/.rubocop.yml
+/usr/lib64/ruby/gems/2.3.0/gems/astrolabe-1.3.1/benchmark/benchmark_helper.rb
+/usr/lib64/ruby/gems/2.3.0/gems/astrolabe-1.3.1/benchmark/performance_spec.rb
+/usr/lib64/ruby/gems/2.3.0/gems/astrolabe-1.3.1/lib/astrolabe.rb
+/usr/lib64/ruby/gems/2.3.0/gems/astrolabe-1.3.1/lib/astrolabe/builder.rb
+/usr/lib64/ruby/gems/2.3.0/gems/astrolabe-1.3.1/lib/astrolabe/node.rb
+/usr/lib64/ruby/gems/2.3.0/gems/astrolabe-1.3.1/lib/astrolabe/sexp.rb
+/usr/lib64/ruby/gems/2.3.0/gems/astrolabe-1.3.1/lib/astrolabe/version.rb
+/usr/lib64/ruby/gems/2.3.0/gems/astrolabe-1.3.1/spec/.rubocop.yml
+/usr/lib64/ruby/gems/2.3.0/gems/astrolabe-1.3.1/spec/astrolabe/node_spec.rb
+/usr/lib64/ruby/gems/2.3.0/gems/astrolabe-1.3.1/spec/astrolabe/sexp_spec.rb
+/usr/lib64/ruby/gems/2.3.0/gems/astrolabe-1.3.1/spec/spec_helper.rb
+/usr/lib64/ruby/gems/2.3.0/gems/astrolabe-1.3.1/spec/support/shared_contexts.rb
+/usr/lib64/ruby/gems/2.3.0/specifications/astrolabe-1.3.1.gemspec
