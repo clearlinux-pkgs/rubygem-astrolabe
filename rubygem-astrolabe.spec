@@ -4,16 +4,24 @@
 #
 Name     : rubygem-astrolabe
 Version  : 1.3.1
-Release  : 5
+Release  : 6
 URL      : https://rubygems.org/downloads/astrolabe-1.3.1.gem
 Source0  : https://rubygems.org/downloads/astrolabe-1.3.1.gem
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : MIT
 BuildRequires : ruby
+BuildRequires : rubygem-ast
+BuildRequires : rubygem-devise
+BuildRequires : rubygem-diff-lcs
 BuildRequires : rubygem-fuubar
+BuildRequires : rubygem-parser
 BuildRequires : rubygem-rdoc
+BuildRequires : rubygem-rspec
 BuildRequires : rubygem-rspec-core
+BuildRequires : rubygem-rspec-expectations
+BuildRequires : rubygem-rspec-mocks
+BuildRequires : rubygem-rspec-support
 BuildRequires : rubygem-rubygems-tasks
 
 %description
@@ -49,6 +57,14 @@ mkdir -p %{buildroot}%{_bindir}
 cp -pa .%{_bindir}/* \
 %{buildroot}%{_bindir}/
 fi
+
+%check
+export http_proxy=http://127.0.0.1:9/
+export https_proxy=http://127.0.0.1:9/
+export no_proxy=localhost
+pushd %{buildroot}%{gem_dir}/gems/astrolabe-1.3.1
+rspec -I.:lib spec/
+popd
 
 
 %files
