@@ -4,7 +4,7 @@
 #
 Name     : rubygem-astrolabe
 Version  : 1.3.1
-Release  : 6
+Release  : 7
 URL      : https://rubygems.org/downloads/astrolabe-1.3.1.gem
 Source0  : https://rubygems.org/downloads/astrolabe-1.3.1.gem
 Summary  : No detailed summary available
@@ -37,6 +37,7 @@ gem unpack %{SOURCE0}
 gem spec %{SOURCE0} -l --ruby > rubygem-astrolabe.gemspec
 
 %build
+export LANG=C
 gem build rubygem-astrolabe.gemspec
 
 %install
@@ -59,6 +60,7 @@ cp -pa .%{_bindir}/* \
 fi
 
 %check
+export LANG=C
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost
